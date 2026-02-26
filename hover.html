@@ -1,0 +1,45 @@
+<style>
+    .cool-btn {
+  position: relative;        /* برای اینکه لایه قبل (::before) داخل دکمه بماند */
+  padding: 15px 30px;
+  font-size: 18px;
+  color: #333;
+  background: transparent;   /* پس‌زمینه اصلی شفاف */
+  border: 2px solid #333;
+  cursor: pointer;
+  overflow: hidden;          /* هر چیزی که از کادر دکمه بیرون زد، مخفی شود */
+  transition: color 0.4s;    /* نرم کردن تغییر رنگ متن */
+}
+
+/* ساخت یک لایه مستطیلی پشت متن */
+.cool-btn::before {
+  content: "";               /* الزامی برای نمایش شبه‌عنصر */
+  position: absolute;
+  top: -100%;
+  right: 0%;               /* لایه را کاملاً به سمت چپ (بیرون دکمه) می‌بریم */
+  width: 100%;
+  height: 100%;
+  background-color: #333;    /* رنگ لایه پرکننده */
+  transition: top 0.4s;     /* نرم کردن حرکت لایه از چپ به راست */
+  z-index: -1;               /* لایه را زیرِ متن قرار می‌دهد */
+}
+
+/* وقتی ماوس روی دکمه می‌رود (Pseudo-class) */
+.cool-btn:hover {
+  color: white;              /* متن سفید شود */
+}
+
+/* وقتی ماوس روی دکمه می‌رود، لایه ::before را تغییر بده (ترکیب دو ویژگی) */
+.cool-btn:hover::before {
+  top: 0;                   /* لایه را به جای اصلی‌اش برمی‌گرداند */
+}
+</style>
+
+<button class="cool-btn">Hover Me!</button>
+<button class="cool-btn">Hover Me!</button>
+<button class="cool-btn">Hover Me!</button>
+<button class="cool-btn">Hover Me!</button>
+<button class="cool-btn">Hover Me!</button>
+<button class="cool-btn">Hover Me!</button>
+<button class="cool-btn">Hover Me!</button>
+<button class="cool-btn">Hover Me!</button>

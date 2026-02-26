@@ -1,0 +1,56 @@
+<style>
+    #main-div {
+        background-color: rgb(32, 73, 160); /* رنگ پس‌زمینه */
+        padding: 20px;              /* فاصله داخلی */
+        border: 2px solid rgb(54, 54, 110);     /* حاشیه */
+        border-radius: 10px;        /* گوشه‌های گرد */
+        width: 600px;                 /* عرض ثابت */
+        height: 500px;                /* ارتفاع ثابت */
+        margin: 50px auto;            /* مرکز کردن با فاصله از بالا */
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* فونت */
+        transition: 0.3s ease; /* انیمیشن تغییر رنگ */
+
+    }
+    #main-div-h1 {
+        font-size: 36px;            /* اندازه فونت */
+        margin-bottom: 20px;        /* فاصله پایین */
+    }
+    #main-div-h1::selection{
+        background-color: white;   /* رنگ پس‌زمینه انتخاب شده */
+        color: black;              /* رنگ متن انتخاب شده */
+    }
+
+    #main-div-p {
+        font-size: 18px;            /* اندازه فونت */
+        line-height: 1.6;
+        color: white;          /* رنگ متن */
+    }
+
+    #main-div-p::selection{
+        background-color: white;   /* رنگ پس‌زمینه انتخاب شده */
+        color: black;              /* رنگ متن انتخاب شده */
+    }
+
+    #main-div:hover {
+        transition: background-color 0.3s ease; /* انیمیشن تغییر رنگ */
+        background-color: rgb(205, 223, 233); /* تغییر رنگ پس‌زمینه هنگام هاور */
+        border: 0px solid rgb(54, 54, 110);     /* تغییر شکل حاشیه هنگام هاور */
+    }
+
+    #main-div:hover #main-div-h1 ,#main-div:hover #main-div-p {
+        color: black;              /* تغییر رنگ متن هنگام هاور */
+    }
+
+    #main-div::content {
+        background-color: rgb(32, 73, 160); /* رنگ پس‌زمینه */
+        
+    }
+</style>
+
+<div id="main-div">
+    <body>
+        <h1 id="main-div-h1">Style Test</h1>
+        <p id="main-div-p">This is a test of the styles.</p>
+    </body>
+</div>
